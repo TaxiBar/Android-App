@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_plus_signin_btn_text_light.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\6684b7f9ba14430786e3b30f6bf39f542532354e\\output\\res\\color\\common_plus_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\62e4ebf83cbee0eab640ada223ff0be176a5cb29\\output\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\e011fd144d7bca1208b42a82d7ca8f6d3e6d1687\\output\\res\\color\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\9a33444a01b02b170d8575cabec80d877aec694e\\output\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\62e4ebf83cbee0eab640ada223ff0be176a5cb29\\output\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\62e4ebf83cbee0eab640ada223ff0be176a5cb29\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\62e4ebf83cbee0eab640ada223ff0be176a5cb29\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\9a33444a01b02b170d8575cabec80d877aec694e\\output\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\9a33444a01b02b170d8575cabec80d877aec694e\\output\\res\\color\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\9a33444a01b02b170d8575cabec80d877aec694e\\output\\res\\color\\abc_tint_default.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\62e4ebf83cbee0eab640ada223ff0be176a5cb29\\output\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_thumb.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\9a33444a01b02b170d8575cabec80d877aec694e\\output\\res\\color\\abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\6684b7f9ba14430786e3b30f6bf39f542532354e\\output\\res\\color\\common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_plus_signin_btn_text_dark.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\6684b7f9ba14430786e3b30f6bf39f542532354e\\output\\res\\color\\common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\62e4ebf83cbee0eab640ada223ff0be176a5cb29\\output\\res\\color\\switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\62e4ebf83cbee0eab640ada223ff0be176a5cb29\\output\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\62e4ebf83cbee0eab640ada223ff0be176a5cb29\\output\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\design_error.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\e011fd144d7bca1208b42a82d7ca8f6d3e6d1687\\output\\res\\color\\design_error.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\62e4ebf83cbee0eab640ada223ff0be176a5cb29\\output\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\9a33444a01b02b170d8575cabec80d877aec694e\\output\\res\\color\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\9a33444a01b02b170d8575cabec80d877aec694e\\output\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\9a33444a01b02b170d8575cabec80d877aec694e\\output\\res\\color\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudio\\android-vision\\visionSamples\\ocr-codelab\\ocr-reader-start\\app\\build\\intermediates\\res\\merged\\debug\\color\\common_google_signin_btn_text_light.xml",
+        "source": "C:\\Users\\LokHim\\.android\\build-cache\\6684b7f9ba14430786e3b30f6bf39f542532354e\\output\\res\\color\\common_google_signin_btn_text_light.xml"
+    }
+]
