@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5dp"
     android:background="@color/backgroundWhite"
     android:id="@+id/mapsLinearLayout"
     tools:context="com.example.gjen.taxibar.MapsActivity">
@@ -62,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:text="車資：0"
+            android:text="預估車資：0"
             android:textSize="20dp" />
 
         <Button

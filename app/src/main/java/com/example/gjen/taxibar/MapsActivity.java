@@ -43,6 +43,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
@@ -65,7 +66,7 @@ import java.util.Locale;
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
-    int checkDisSmallestDis = 1;
+    int checkDisSmallestDis = 500;
 
     EditText etAddr;
     ImageButton btnMic;
@@ -78,13 +79,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private GoogleMap mMap;
     String data = "";
-    Marker itemMarker, currentMarker, destiMarker;
+    Marker itemMarker, currentMarker, startMarker, destiMarker;
     String plateNum = null;
     String userName = null;
 
     // 抓位置
-    static final int MIN_TIME = 1100;// 位置更新條件：5000 毫秒
-    static final float MIN_DIST = 0; // 位置更新條件：5 公尺
+    static final int MIN_TIME = 5000;// 位置更新條件：5000 毫秒
+    static final float MIN_DIST = 0; // 位置更新條件：10 公尺
     LocationManager mgr;        // 定位總管
     LocationListener myLocListener;
     Location currentLocation;
@@ -103,6 +104,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     final int NTF_ID = 1000;
     int notiFlag = 0;
 
+    // 預估車資
     Handler handler = new Handler();
 
     @Override
@@ -191,9 +193,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
+
+//        mMap.setMyLocationEnabled(true);
+//        mMap.setOnMyLocationButtonClickListener(onMyLocationButtonClickListener);
         currentLocation = mgr.getLastKnownLocation(bestProvider);
         if(currentLocation != null){
-            mMap.setMyLocationEnabled(true);
             currentLatLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
             currentMarker = mMap.addMarker(new MarkerOptions()
                     .position(currentLatLng)
@@ -209,7 +213,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private void getBestProvider(){
 //        Criteria criteria = new Criteria();
 //        bestProvider = mgr.getBestProvider(criteria, false);
-        bestProvider = NetProvider;
+        bestProvider = GPSProvider;
     }
 
     private String getDirectionsUrl(LatLng origin, LatLng dest) {
@@ -348,7 +352,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 // Starts parsing data
                 routes = parser.parse(jObject);
                 distance = parser.getDistance(jObject);
-                Log.d("abc", "distance : " + distance);
                 money = calMoney();
                 handler.post(runnable);
                 Log.d("abc", "money : " + String.valueOf(money));
@@ -598,10 +601,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
             destiLatLng = geoCorder(address);
             if(destiLatLng != null){
-                currentMarker = mMap.addMarker(new MarkerOptions()
+                startMarker = mMap.addMarker(new MarkerOptions()
                         .position(currentLatLng)
-                        .title("Current")
-                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.taxi)));
+                        .title("Starting Point"));
                 destiMarker = mMap.addMarker(new MarkerOptions()
                         .position(destiLatLng)
                         .title("Destination"));
@@ -666,21 +668,21 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private void notification(){
         notiFlag = 1;
 
-        Intent it = new Intent(this, MapsActivity.class);
-        it.putExtra("PlateNum", plateNum);
-        it.putExtra("userName", userName);
-        it.putExtra("destination", etAddr.getText().toString());
-        it.putExtra("Lat", currentLatLng.latitude);
-        it.putExtra("Long", currentLatLng.longitude);
-
-        PendingIntent pIntent = PendingIntent.getActivity(this, 0, it, PendingIntent.FLAG_ONE_SHOT);
+//        Intent it = new Intent(this, MapsActivity.class);
+//        it.putExtra("PlateNum", plateNum);
+//        it.putExtra("userName", userName);
+//        it.putExtra("destination", etAddr.getText().toString());
+//        it.putExtra("Lat", currentLatLng.latitude);
+//        it.putExtra("Long", currentLatLng.longitude);
+//
+//        PendingIntent pIntent = PendingIntent.getActivity(this, 0, it, PendingIntent.FLAG_ONE_SHOT);
 
         Notification notification = new NotificationCompat.Builder(this)
                 .setSmallIcon(R.drawable.noti)
                 .setContentTitle("TaxiBar")
                 .setContentText("超出原先預定路徑")
                 .setDefaults(Notification.DEFAULT_ALL)
-                .setContentIntent(pIntent)
+//                .setContentIntent(pIntent)
                 .setAutoCancel(true)
                 .build();
         ntfMgr.notify(NTF_ID, notification);
