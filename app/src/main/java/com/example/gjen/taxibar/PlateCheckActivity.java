@@ -366,4 +366,39 @@ public class PlateCheckActivity extends AppCompatActivity {
             }
         }
     }
+    //delete------------------------------
+    public static void main(String[] args) {
+        ReturnDemo1 v = new ReturnDemo1();
+        int result = v.add(11, 22);
+        System.out.println(result);
+    }
+    //delete---------------------------------
+    //delete------------------------------
+    public static void main(String[] args) {
+        ReturnDemo1 v = new ReturnDemo1();
+        int result = v.add(11, 22);
+        System.out.println(result);
+    }
+    //delete---------------------------------
+    //delete------------------------------
+    public static void main(String[] args) {
+        ReturnDemo1 v = new ReturnDemo1();
+        int result = v.add(11, 22);
+        System.out.println(result);
+    }
+    //delete---------------------------------
+    //delete------------------------------
+    public static void main(String[] args) {
+        ReturnDemo1 v = new ReturnDemo1();
+        int result = v.add(11, 22);
+        System.out.println(result);
+    }
+    //delete---------------------------------
+    //delete------------------------------
+    public static void main(String[] args) {
+        ReturnDemo1 v = new ReturnDemo1();
+        int result = v.add(11, 22);
+        System.out.println(result);
+    }
+    //delete---------------------------------
 }
