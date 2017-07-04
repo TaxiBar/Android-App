@@ -172,7 +172,6 @@ public class RoutePlanActivity extends AppCompatActivity {
 
     }
 
-
     public void onRoutePlanCancel(View v) {
         RoutePlanActivity.this.finish();
     }
