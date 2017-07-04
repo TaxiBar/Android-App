@@ -1,10 +1,8 @@
 package com.example.gjen.taxibar;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -21,16 +19,13 @@ import android.os.AsyncTask;
 import android.os.Handler;
 import android.speech.RecognizerIntent;
 import android.support.annotation.NonNull;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -43,7 +38,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
@@ -92,7 +86,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     LatLng currentLatLng, destiLatLng;
     String GPSProvider = LocationManager.GPS_PROVIDER;
     String NetProvider = LocationManager.NETWORK_PROVIDER;
-    String bestProvider;
+    String bestProvider = GPSProvider;
 
     // 路經中的轉角點
     ArrayList<LatLng> points = null;
@@ -121,7 +115,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         findviews();
         mgr = (LocationManager) getSystemService(LOCATION_SERVICE);
         ntfMgr = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        getBestProvider();
+//        getBestProvider();
         setMyLocListener();
         getBundle();
     }
@@ -194,11 +188,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             return;
         }
 
-//        mMap.setMyLocationEnabled(true);
-//        mMap.setOnMyLocationButtonClickListener(onMyLocationButtonClickListener);
+        mMap.setMyLocationEnabled(true);
+        mMap.setOnMyLocationButtonClickListener(onMyLocationButtonClickListener);
         currentLocation = mgr.getLastKnownLocation(bestProvider);
         if(currentLocation != null){
             currentLatLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+            Log.d("abc", "currentLocation : " + String.valueOf(currentLatLng.latitude));
             currentMarker = mMap.addMarker(new MarkerOptions()
                     .position(currentLatLng)
                     .title("Current")
@@ -213,7 +208,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private void getBestProvider(){
 //        Criteria criteria = new Criteria();
 //        bestProvider = mgr.getBestProvider(criteria, false);
-        bestProvider = GPSProvider;
+//        bestProvider = GPSProvider;
     }
 
     private String getDirectionsUrl(LatLng origin, LatLng dest) {
@@ -499,6 +494,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onResume() {
         super.onResume();
+        Log.d("abc", "onResume");
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -509,6 +505,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             // for ActivityCompat#requestPermissions for more details.
             return;
         }
+        Log.d("abc", "onResume");
         mgr.requestLocationUpdates(bestProvider, MIN_TIME, MIN_DIST, myLocListener);
     }
 
@@ -718,7 +715,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Runnable runnable = new Runnable() {
         @Override
         public void run() {
-            tvMoney.setText("車資 : "+String.valueOf(money));
+            tvMoney.setText("預估車資 : "+String.valueOf(money));
         }
     };
 
@@ -735,4 +732,13 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
         return zoomNum;
     }
+
+    GoogleMap.OnMyLocationButtonClickListener onMyLocationButtonClickListener = new GoogleMap.OnMyLocationButtonClickListener() {
+        @Override
+        public boolean onMyLocationButtonClick() {
+            currentLocation = mMap.getMyLocation();
+            currentLatLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
+            return false;
+        }
+    };
 }

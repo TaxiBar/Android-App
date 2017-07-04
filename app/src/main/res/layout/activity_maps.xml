@@ -102,7 +102,7 @@
         android:layout_margin="5dp"
         android:layout_weight="2"
         android:onClick="onMapsWriteComment"
-        android:text="評論"
+        android:text="評價"
         android:textSize="20dp"
         android:textColor="#fff"
         android:background="@drawable/button_round"/>
